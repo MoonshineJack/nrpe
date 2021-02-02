@@ -49,11 +49,6 @@ else
   end
 end
 
-directory node['nrpe']['conf_dir'] do
-  group node['nrpe']['group']
-  mode  '0750'
-end
-
 bash 'compile-nagios-nrpe' do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH

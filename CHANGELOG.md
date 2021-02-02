@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of nrpe
 
+## 3.0.2 (2021-01-02)
+
+- Move conf_dir creation to default.rb
+
 ## 3.0.1 (2020-05-05)
 
 - Add bin_dir to nrpe version check

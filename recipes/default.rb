@@ -25,6 +25,12 @@
 # limitations under the License.
 #
 
+# create the conf dir here for broader compatibility with configure.rb
+directory node['nrpe']['conf_dir'] do
+  group node['nrpe']['group']
+  mode  '0750'
+end
+
 # install the nrpe daemon and plugins using the appropriate recipe(s)
 include_recipe "nrpe::_#{node['nrpe']['install_method']}_install"
 
